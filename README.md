@@ -10,6 +10,7 @@ In the demo site, we are using a MobileNet backend for inference of keypoints, a
 
 ### Demo
 [Live Demo](http://13.229.209.149/)
+*Does not work on Chrome due to not being HTTPS.
 
 ### Setup
 Just start punching. A fast internet connection will help. # ipman
