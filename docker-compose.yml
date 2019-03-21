@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  dash_app:
+    container_name: dash_app
+    restart: always
+    build: ./dash_app
+    ports:
+      - "8000:8000"
+    command: gunicorn -k eventlet -w 1 -b :8000 app:app
+
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "5000:5000"
+    depends_on:
+      - dash_app
